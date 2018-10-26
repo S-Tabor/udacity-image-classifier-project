@@ -14,35 +14,36 @@ from functions import build_classifier, validation, train_model, test_model, sav
 parser = argparse.ArgumentParser(description='Train neural network.')
 
 # ../aipnd-project/flowers
-parser.add_argument('data_directory', action='store',
-                    help='Enter path to training data.')
+parser.add_argument('data_directory', action = 'store',
+                    help = 'Enter path to training data.')
 
 parser.add_argument('--arch', action='store',
-                    dest='pretrained_model', default='vgg11',
-                    help='Enter pretrained model to use; this classifier can currently work with VGG and Densenet architectures. The default is VGG-11.')
+                    dest = 'pretrained_model', default = 'vgg11',
+                    help= 'Enter pretrained model to use; this classifier can currently work with\
+                           VGG and Densenet architectures. The default is VGG-11.'
 
-parser.add_argument('--save_dir', action='store',
-                    dest='save_directory', default = 'checkpoint.pth',
-                    help='Enter location to save checkpoint in.')
+parser.add_argument('--save_dir', action = 'store',
+                    dest = 'save_directory', default = 'checkpoint.pth',
+                    help = 'Enter location to save checkpoint in.')
 
-parser.add_argument('--learning_rate', action='store',
-                    dest='lr', type=int, default = 0.001,
-                    help='Enter learning rate for training the model, default is 0.001.')
+parser.add_argument('--learning_rate', action = 'store',
+                    dest = 'lr', type=int, default = 0.001,
+                    help = 'Enter learning rate for training the model, default is 0.001.')
 
-parser.add_argument('--dropout', action='store',
+parser.add_argument('--dropout', action = 'store',
                     dest='drpt', type=int, default = 0.05,
-                    help='Enter dropout for training the model, default is 0.05.')
+                    help = 'Enter dropout for training the model, default is 0.05.')
 
-parser.add_argument('--hidden_units', action='store',
-                    dest='units', type=int, default = 500,
-                    help='Enter number of hidden units in classifier, default is 500.')
+parser.add_argument('--hidden_units', action = 'store',
+                    dest = 'units', type=int, default = 500,
+                    help = 'Enter number of hidden units in classifier, default is 500.')
 
-parser.add_argument('--epochs', action='store',
-                    dest='num_epochs', type=int, default = 2,
-                    help='Enter number of epochs to use during training, default is 1.')
+parser.add_argument('--epochs', action = 'store',
+                    dest = 'num_epochs', type = int, default = 2,
+                    help = 'Enter number of epochs to use during training, default is 1.')
 
-parser.add_argument('--gpu', action="store_true", default=False,
-                    help='Turn GPU mode on or off, default is off.')
+parser.add_argument('--gpu', action = "store_true", default = False,
+                    help = 'Turn GPU mode on or off, default is off.')
 
 results = parser.parse_args()
 
