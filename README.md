@@ -4,5 +4,5 @@ I completed this project as part of Term 1 of Udacity's Data Scientist Nanodegre
 
 This project uses PyTorch and the torchvision package; the Jupyter Notebook walks through the implementation of the image classifier and shows an example of the classifiers prediction on a test image. The classifier was also converted into a pyhton application which could be run from command line using "train.py" and "predict.py".
 
-
+Thank you for your time and interest!
 
